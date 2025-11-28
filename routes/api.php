@@ -35,5 +35,3 @@ Route::middleware('auth:sanctum')->group(function () {
      */
     Route::put('books/{id}/borrow-return', [BooksController::class, 'borrowReturn']);
 });
-
-
