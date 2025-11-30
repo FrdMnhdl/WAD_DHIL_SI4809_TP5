@@ -16,6 +16,22 @@ class Book extends Model
     protected $table = 'books';
 
     protected $fillable = [
-
+        'title',
+        'author',
+        'published_year',
+        'is_available',
     ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'is_available' => 'boolean',
+            'published_year' => 'integer',
+        ];
+    }
 }
